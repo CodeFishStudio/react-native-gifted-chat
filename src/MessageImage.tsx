@@ -66,14 +66,16 @@ export default class MessageImage<
       imageStyle,
       currentMessage,
     } = this.props
+    const {onLongPress, ...passedLightBoxProps} = lightboxProps;
     if (!!currentMessage) {
       return (
         <View style={[styles.container, containerStyle]}>
           <Lightbox
+              onLongPress={() => onLongPress(currentMessage)}
             activeProps={{
               style: styles.imageActive,
             }}
-            {...lightboxProps}
+            {...passedLightBoxProps}
           >
             <Image
               {...imageProps}

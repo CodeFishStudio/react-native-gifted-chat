@@ -318,6 +318,15 @@ interface QuickReplies {
 - **`imageProps`** _(Object)_ - Extra props to be passed to the [`<Image>`](https://facebook.github.io/react-native/docs/image.html) component created by the default `renderMessageImage`
 - **`videoProps`** _(Object)_ - Extra props to be passed to the video component created by the required `renderMessageVideo`
 - **`lightboxProps`** _(Object)_ - Extra props to be passed to the `MessageImage`'s [Lightbox](https://github.com/oblador/react-native-lightbox)
+```js
+//Delete images on long press
+ <GiftedChat
+   lightboxProps={{
+       onLongPress: message =>
+       this.onLongPress(false, message),
+     }}
+ />
+```
 - **`isCustomViewBottom`** _(Bool)_ - Determine whether renderCustomView is displayed before or after the text, image and video views; default is `false`
 - **`renderCustomView`** _(Function)_ - Custom view inside the bubble
 - **`renderDay`** _(Function)_ - Custom day above a message

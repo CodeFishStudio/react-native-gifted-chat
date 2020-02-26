@@ -37,7 +37,7 @@
     "test:coverage": "TZ=Europe/Paris jest --coverage",
     "prepublishOnly": "yarn lint && yarn build && yarn test && yarn config:npm",
     "postpublish": "yarn config:dev",
-    "postinstall": "cd ./node_modules/my-forked-project && npm install && npm run build"
+    "postinstall": "cd ./node_modules/react-native-gifted-chat && npm install && npm run build"
   },
   "jest": {
     "preset": "react-native",
